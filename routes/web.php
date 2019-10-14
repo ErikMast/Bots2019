@@ -14,8 +14,13 @@
 Route::get('/', 'DashboardController@index')->name('dashboard.index');
 Route::get('/report', 'ReportController@index')->name('report.index');
 Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:10,1');
-Route::get('/reports', 'ReportController@reports')->name('report.reports');
 
 Auth::routes(["register" => false]);
 
-Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
+
+Route::middleware("auth")->group(function() {
+
+    Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
+    Route::get('/reports', 'ReportController@reports')->name('report.reports');
+
+});
