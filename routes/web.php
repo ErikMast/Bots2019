@@ -11,11 +11,10 @@
 |
 */
 
-Route::permanentRedirect('/', '/report');
+Route::get('/', 'DashboardController@index')->name('dashboard.index');
 Route::get('/report', 'ReportController@index')->name('report.index');
 Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:10,1');
 
 Auth::routes(["register" => false]);
 
 Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
