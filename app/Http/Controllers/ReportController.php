@@ -24,6 +24,7 @@ class ReportController extends Controller
     }
     public function reports()
     {
-        return view("report.reports");
+        $report = Report::all();
+        return view ('report.reports')->with('report', $report);
     }
 }

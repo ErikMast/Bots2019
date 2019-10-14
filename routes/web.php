@@ -22,5 +22,6 @@ Route::middleware("auth")->group(function() {
 
     Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
     Route::get('/reports', 'ReportController@reports')->name('report.reports');
+  
 
 });
