@@ -81,45 +81,64 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/report.js":
-/*!********************************!*\
-  !*** ./resources/js/report.js ***!
-  \********************************/
+/***/ "./resources/js/seismic.js":
+/*!*********************************!*\
+  !*** ./resources/js/seismic.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    alert("Jouw browser ondersteunt dit niet!");
+// var ctx = document.getElementById("examChart").getContext("2d");
+var d = [];
+document.addEventListener('DOMContentLoaded', function () {
+  axios.get('./api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2').then(function (response) {
+    console.log(response);
+    d = response.data;
+    response.data.forEach(function () {});
+  });
+});
+var set = {
+  backgroundColor: "color",
+  borderWidth: 1,
+  datasets: [{
+    label: 'Verloopgrafiek',
+    backgroundColor: "black",
+    data: [1, 2, 3, 4, 5, 6]
+  }]
+};
+ctx = document.getElementById('line');
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: set,
+  options: {
+    responsive: true,
+    legend: {
+      position: 'top'
+    },
+    title: {
+      display: true,
+      text: 'Chart.js Bar Chart'
+    }
   }
-}
-
-function showPosition(position) {
-  console.log(position.coords.latitude + " " + position.coords.longitude);
-  document.getElementById('coords').innerHTML = "Noorderbreedte: " + position.coords.latitude + " Zuiderbreedte: " + position.coords.longitude;
-  document.getElementsByName("long")[0].value = position.coords.longitude;
-  document.getElementsByName("lat")[0].value = position.coords.latitude;
-}
-
-getLocation();
+});
+myChart.update();
+console.log("chart");
 
 /***/ }),
 
-/***/ 1:
-/*!**************************************!*\
-  !*** multi ./resources/js/report.js ***!
-  \**************************************/
+/***/ 2:
+/*!***************************************!*\
+  !*** multi ./resources/js/seismic.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\report.js */"./resources/js/report.js");
+module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\seismic.js */"./resources/js/seismic.js");
 
 
 /***/ })

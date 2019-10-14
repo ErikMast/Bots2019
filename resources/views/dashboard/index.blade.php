@@ -32,14 +32,20 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
 
-                    <div class="card-header bg-dark text-white">
-                        Verloopgrafiek
-                    </div>
-
-                </div>
             </div>
+        </div>
+
+        <div class="card">
+
+            <div class="card-header bg-dark text-white">
+                Verloopgrafiek
+            </div>
+
+            <div class="card-body">
+                <canvas id="line"></canvas>
+            </div>
+
         </div>
 
         <div class="row">
@@ -72,4 +78,8 @@
 
     </div>
 
+@endsection
+
+@section('scripts')
+    <script src="{{asset("js/seismic.js")}}"></script>
 @endsection

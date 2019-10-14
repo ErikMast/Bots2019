@@ -49338,6 +49338,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49494,8 +49496,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -17,6 +17,9 @@ Route::post('/report', 'ReportController@store')->name('report.store')->middlewa
 
 Auth::routes(["register" => false]);
 
+Route::prefix("api/v1")->name('api.')->group(function() {
+    Route::get('/seismic/line', 'SeismicController@lineChart')->name('seismic.line');
+});
 
 Route::middleware("auth")->group(function() {
 
