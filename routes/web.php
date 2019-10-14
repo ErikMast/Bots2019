@@ -12,4 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/report', 'ReportController@index')->name('report.index');
+Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:1,1');
+
 Auth::routes(["register" => false]);
