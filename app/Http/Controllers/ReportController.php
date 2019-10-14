@@ -22,5 +22,8 @@ class ReportController extends Controller
 
         return view("report.success");
     }
-
+    public function reports()
+    {
+        return view("report.reports");
+    }
 }

@@ -16,6 +16,8 @@
 
                   <!-- Right Side Of Navbar -->
                   <ul class="navbar-nav ml-auto test">
+                      
+                        <a class="nav-link" href="/report">Report</a>
                       <!-- Authentication Links -->
                       @guest
                           <li class="nav-item">
@@ -35,7 +37,7 @@
                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                   
                                     <a class="dropdown-item" href="/accounts">Accounts</a>
-                                    <a class="dropdown-item" href="/report">Report</a>
+                                    <a class="dropdown-item" href="/reports">reports</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
