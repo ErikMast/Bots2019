@@ -17,5 +17,5 @@ Route::post('/report', 'ReportController@store')->name('report.store')->middlewa
 
 Auth::routes(["register" => false]);
 
-Route::get('/dashboard', 'PagesController@dashboard');
-Route::get('/accounts', 'PagesController@accounts');
+Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
