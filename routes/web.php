@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::permanentRedirect('/', '/report');
 Route::get('/report', 'ReportController@index')->name('report.index');
-Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:1,1');
+Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:10,1');
 
 Auth::routes(["register" => false]);
 

@@ -8,7 +8,7 @@
             <div class="col-md-4">
 
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-dark text-white">
                         Waarom rapporteren?
                     </div>
 
@@ -23,7 +23,7 @@
             <div class="col-md-6">
 
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-dark text-white">
                         Rapportageformulier
                     </div>
                     <div class="card-body">
@@ -50,7 +50,7 @@
                                 <option value="10">Totale schade, objecten vliegen in het rond, flatgebouwen storten in</option>
                             </select>
                             <hr>
-                            <input type="submit" value="Insturen" class="btn btn-primary">
+                            <input type="submit" value="Insturen" class="btn btn-outline-dark">
 
                         </form>
 
