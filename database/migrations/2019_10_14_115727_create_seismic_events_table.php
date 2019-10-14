@@ -25,6 +25,8 @@ class CreateSeismicEventsTable extends Migration
             $table->date("date");
             $table->string("place");
 
+            $table->string('hash')->unique();
+
             $table->timestamps();
         });
     }
