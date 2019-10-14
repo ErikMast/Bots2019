@@ -20,7 +20,7 @@ class CreateSeismicEventsTable extends Migration
             $table->double("long");
             $table->double("lat");
 
-            $table->integer("mag");
+            $table->double("mag");
             $table->string("type");
             $table->date("date");
             $table->string("place");
