@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SeismicLineChart;
+use App\Prediction;
 use App\SeismicEvent;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,6 +17,15 @@ class SeismicController extends Controller
         $endDate = $request->get('end_date');
 
         $events = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->orderBy('date')->get();
+
+        return response()->json($events);
+    }
+
+    public function predictionChart()
+    {
+
+
+        $events = Prediction::get();
 
         return response()->json($events);
     }
@@ -45,6 +55,7 @@ class SeismicController extends Controller
             $inducedCount, $naturalCount
         ]);
     }
+
 
     public function lineChart(SeismicLineChart $request)
     {
