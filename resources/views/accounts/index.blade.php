@@ -16,6 +16,7 @@
                                 <th> name</th>
                                 <th> email </th>
                                 <th> created_at</th>
+                                <th> rols </th>
                                 <th> bijwerken </th>
                                 <th> verwijderen </th>
                             </tr>
@@ -26,7 +27,8 @@
                                 <td>{{$users->id}}</td>
                                 <td>{{$users->name}}</td>
                                 <td>{{$users->email}}</td>
-                                <td>{{$users->created_at}}</td>           
+                                <td>{{$users->created_at}}</td>  
+                                <td>  </td>           
                                 <td><button class="btn btn-primary">bijwerken</button></td>          
                                 <td><button class="btn btn-danger">verwijderen</button></td>                 
                               </tr>

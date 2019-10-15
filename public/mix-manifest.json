@@ -1,7 +1,8 @@
 {
-    "/js/air.js": "/js/air.js?id=85e01b0a3d726bef2eb1",
-    "/js/app.js": "/js/app.js?id=c2b74e35886791af2fa1",
+    "/js/air.js": "/js/air.js?id=95ea485f40d113814176",
+    "/js/app.js": "/js/app.js?id=a721fd33c5f9c760477d",
     "/css/app.css": "/css/app.css?id=55972315e7b86f585b78",
-    "/js/report.js": "/js/report.js?id=50ea53869914510033e0",
-    "/js/seismic.js": "/js/seismic.js?id=d11b4c02456859d9e014"
+    "/js/prediction.js": "/js/prediction.js?id=70593892a8d11fe555c7",
+    "/js/report.js": "/js/report.js?id=02476f103ae6587cb44b",
+    "/js/seismic.js": "/js/seismic.js?id=a691274e24eaa536d92a"
 }

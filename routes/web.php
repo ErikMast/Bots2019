@@ -30,5 +30,4 @@ Route::prefix("api/v1")->name('api.')->group(function() {
 Route::middleware("auth")->group(function() {
     Route::get('/accounts', 'accountsController@index')->name('pages.accounts');
     Route::get('/reports', 'ReportController@reports')->name('report.reports');
-    Route::get('/prediction', 'PredictionController@index')->name('predictions.index');
 });

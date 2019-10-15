@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -300,7 +300,6 @@ document.addEventListener('DOMContentLoaded', function () {
       data: heatData
     });
     heatmap.setMap(map);
-    console.log("YES"); //
     // var heatData = [];
     //
     // for(i in response.data)
@@ -359,7 +358,6 @@ document.addEventListener('DOMContentLoaded', function () {
       c++;
     }
   });
-  console.log(labels);
   ctx = document.getElementById('line');
   var myChart = new Chart(ctx, {
     type: 'line',
@@ -383,7 +381,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   window.setTimeout(function () {
-    console.log("Refresh");
     myChart.data.datasets.forEach(function (ds) {
       ds.hidden = false;
     });
@@ -393,14 +390,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./resources/js/air.js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\air.js */"./resources/js/air.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\air.js */"./resources/js/air.js");
 
 
 /***/ })

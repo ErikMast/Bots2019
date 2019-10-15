@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
         heatmap.setMap(map);
 
 
-        console.log("YES");
 
         //
         // var heatData = [];
@@ -272,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-    console.log(labels);
 
 
     ctx = document.getElementById('line');
@@ -299,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     window.setTimeout(() => {
-        console.log("Refresh");
         myChart.data.datasets.forEach(function(ds) {
             ds.hidden = false;
         });

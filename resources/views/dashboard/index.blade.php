@@ -62,6 +62,8 @@
                                 <div id="cred4654" style="width: 100%; height: 40em;"></div>                             </div>
                         </div>
                     </div>
+                    
+                    @auth
                     <div class="card">
                         <div class="card-header bg-dark text-white" id="headingTwo">
                             <h2 class="mb-0">
@@ -75,7 +77,7 @@
                                 <div id="sasdada" style="width: 100%; height: 40em;"></div>                            </div>
                         </div>
                     </div>
-
+                    @endauth
                 </div>
 
 {{--                <div id="accordion">--}}

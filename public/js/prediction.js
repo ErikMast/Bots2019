@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/seismic.js":
-/*!*********************************!*\
-  !*** ./resources/js/seismic.js ***!
-  \*********************************/
+/***/ "./resources/js/prediction.js":
+/*!************************************!*\
+  !*** ./resources/js/prediction.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -478,7 +478,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 /*
 Line chart
- */
+*/
 
 var data = [];
 var labels = [];
@@ -492,6 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
       c++;
     }
   });
+  console.log(labels);
   ctx = document.getElementById('line');
   var myChart = new Chart(ctx, {
     type: 'line',
@@ -515,6 +516,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   window.setTimeout(function () {
+    console.log("Refresh");
     myChart.data.datasets.forEach(function (ds) {
       ds.hidden = false;
     });
@@ -524,14 +526,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ 2:
-/*!***************************************!*\
-  !*** multi ./resources/js/seismic.js ***!
-  \***************************************/
+/***/ 3:
+/*!******************************************!*\
+  !*** multi ./resources/js/prediction.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\seismic.js */"./resources/js/seismic.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\prediction.js */"./resources/js/prediction.js");
 
 
 /***/ })
