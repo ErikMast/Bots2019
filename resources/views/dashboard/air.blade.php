@@ -44,7 +44,7 @@
         <br>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10">
 
 
                 <div class="accordion" id="accordionExample">
@@ -86,6 +86,20 @@
 
 
                 {{--                </div>--}}
+            </div>
+            <div class="col-md-2">
+                <div id="collapseOne" class="collapse hidden legend">
+                    <h4>Legend</h4>
+                    <ul>
+                        <li><span style="background-color:#FA5C43"></span>NO - Monday</li>
+                        <li><span style="background-color:#998973"></span>PM10 - Tuesday</li>
+                        <li><span style="background-color:#FAAE43"></span>NO2 - Wednesday</li>
+                        <li><span style="background-color:#1F6980"></span>FN - Thursday</li>
+                        <li><span style="background-color:#AB156A"></span>C8H10 - Friday</li>
+                        <li><span style="background-color:#AB156A"></span>C7H8 - Friday</li>
+                        <li><span style="background-color:#AB156A"></span>C6H6 - Friday</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <br>

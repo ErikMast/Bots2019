@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var heatmap = new google.maps.visualization.HeatmapLayer({
       data: heatData
     });
-    heatmap.setMap(map);
+    heatmap.setMap(map); //
     // var heatData = [];
     //
     // for(i in response.data)

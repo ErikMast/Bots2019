@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var heatmap = new google.maps.visualization.HeatmapLayer({
       data: heatData
     });
-    heatmap.setMap(map);
+    heatmap.setMap(map); //
     // var heatData = [];
     //
     // for(i in response.data)
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./resources/js/air.js ***!
   \***********************************/
