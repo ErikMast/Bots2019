@@ -57,7 +57,7 @@
                             </h2>
                         </div>
 
-                        <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <div id="cred4654" style="width: 100%; height: 40em;"></div>                             </div>
                         </div>
@@ -88,7 +88,7 @@
                 {{--                </div>--}}
             </div>
             <div class="col-md-2">
-                <div id="collapseOne" class="collapse hidden legend">
+                <div class="legend">
                     <h4>Legend</h4>
                     <ul>
                         <li><span style="background-color:#FA5C43"></span>NO - Monday</li>
@@ -115,7 +115,7 @@
 
         </div>
         <br>
-        <div class="row">
+        {{-- <div class="row">
 
             <div class="col-md-4">
                 <div class="card">
@@ -150,8 +150,7 @@
                 </div>
             </div>
 
-        </div>
-        <br>
+        </div> --}}
 
 
     </div>

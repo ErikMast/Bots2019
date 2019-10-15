@@ -25,7 +25,7 @@
                               <tr>    
                                 <td>{{$reports->long}}</td>
                                 <td>{{$reports->lat}}</td>
-                                <td><a href="https://maps.google.com/?q={{$reports->long}} {{$reports->lat}} " target="_blank">Map</a></td>
+                                <td><a href="https://maps.google.com/?q={{$reports->lat}} {{$reports->long}}" target="_blank">Map</a></td>
                                 <td>{{$reports->magnitude}}</td>
                                 <td>{{$reports->created_at}}</td>           
                                 <td>{{$reports->updated_at}}</td>                 
