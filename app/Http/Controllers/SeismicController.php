@@ -33,6 +33,19 @@ class SeismicController extends Controller
         ]);
     }
 
+    public function magnitudeSeperatorGraph(SeismicLineChart $request)
+    {
+        $startDate = $request->get('start_date');
+        $endDate = $request->get('end_date');
+
+        $inducedCount = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->where("mag", "<", "3")->count();
+        $naturalCount = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->where("mag", ">=", 3)->count();
+
+        return response()->json([
+            $inducedCount, $naturalCount
+        ]);
+    }
+
     public function lineChart(SeismicLineChart $request)
     {
         $startDate = $request->get('start_date');

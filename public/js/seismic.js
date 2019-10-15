@@ -107,13 +107,30 @@ document.addEventListener('DOMContentLoaded', function () {
   axios.get('/api/v1/seismic/seperator?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
     d2 = {
       datasets: [{
-        data: [data.data[0], data.data[1]]
+        data: [data.data[0], data.data[1]],
+        backgroundColor: ['#43a047', '#0277bd']
       }],
       // These labels appear in the legend and in the tooltips when hovering different arcs
       labels: ['Menselijk', 'Natuurlijk']
     }; // debugger;
 
     var myPieChart = new Chart(document.getElementById('inducedvsnatural'), {
+      type: 'pie',
+      data: d2 // options: options
+
+    });
+  });
+  axios.get('/api/v1/seismic/magnitude?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
+    d2 = {
+      datasets: [{
+        data: [data.data[0], data.data[1]],
+        backgroundColor: ['#43a047', '#0277bd']
+      }],
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+      labels: ['<3', '>=3']
+    }; // debugger;
+
+    var myPieChart = new Chart(document.getElementById('magnitude'), {
       type: 'pie',
       data: d2 // options: options
 

@@ -90,7 +90,6 @@
                     </div>
                     <div class="card-body">
                         <canvas id="inducedvsnatural"></canvas>
-                        <div class="alert alert-warning">This database is still computing, 3GB of data in total</div>
                     </div>
                 </div>
             </div>
@@ -101,7 +100,7 @@
                         Aandeel klein (<3r) vs groot (3r>)
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-warning">This database is still computing, 9GB of data in total</div>
+                        <canvas id="magnitude"></canvas>
                     </div>
                 </div>
             </div>
@@ -109,10 +108,10 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-dark text-white">
-                        undefined graph
+                        Free slot
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-danger">No graph associated with this card</div>
+                        <div class="alert alert-danger">Reserved for later use</div>
                     </div>
                 </div>
             </div>
