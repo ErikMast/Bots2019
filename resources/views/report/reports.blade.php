@@ -9,7 +9,7 @@
                     <div class="card-header bg-dark text-white">
                         Dit zijn de resultaten van de form op report
                     </div>
-                    <table>
+                    <table class="table table-sm">
                         <thead>
                             <tr>
                                 <th> id</th>
