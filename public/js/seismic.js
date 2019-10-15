@@ -94,40 +94,42 @@
 /***/ (function(module, exports) {
 
 // var ctx = document.getElementById("examChart").getContext("2d");
-var d = [];
+var data = [];
+var labels = [];
 document.addEventListener('DOMContentLoaded', function () {
   axios.get('./api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2').then(function (response) {
-    console.log(response);
-    d = response.data;
-    response.data.forEach(function () {});
-  });
-});
-var set = {
-  backgroundColor: "color",
-  borderWidth: 1,
-  datasets: [{
-    label: 'Verloopgrafiek',
-    backgroundColor: "black",
-    data: [1, 2, 3, 4, 5, 6]
-  }]
-};
-ctx = document.getElementById('line');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: set,
-  options: {
-    responsive: true,
-    legend: {
-      position: 'top'
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart'
+    var c = 0;
+
+    for (body in response.data) {
+      data.push(response.data[body].count);
+      labels[body] = String(response.data[body].start + ' - ' + response.data[body].end);
+      c++;
     }
-  }
-});
-myChart.update();
-console.log("chart");
+  });
+  console.log(labels);
+  ctx = document.getElementById('line');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      "datasets": [{
+        label: "Aardbevingen",
+        data: data
+      }],
+      "labels": labels
+    },
+    options: {
+      responsive: true,
+      legend: {
+        position: 'top'
+      },
+      title: {
+        display: true,
+        text: 'Seismische activiteit'
+      }
+    }
+  });
+  myChart.update();
+}); // myChart.update();
 
 /***/ }),
 
