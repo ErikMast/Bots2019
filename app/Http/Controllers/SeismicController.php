@@ -10,6 +10,16 @@ use Illuminate\Http\Request;
 class SeismicController extends Controller
 {
 
+    public function heatMapChart(SeismicLineChart $request)
+    {
+        $startDate = $request->get('start_date');
+        $endDate = $request->get('end_date');
+
+        $events = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->orderBy('date')->get();
+
+        return response()->json($events);
+    }
+
     public function lineChart(SeismicLineChart $request)
     {
         $startDate = $request->get('start_date');
