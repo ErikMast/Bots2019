@@ -38,6 +38,9 @@
                                   
                                     <a class="dropdown-item" href="/accounts">Accounts</a>
                                     <a class="dropdown-item" href="/reports">reports</a>
+                                    {{-- @if (Auth::$users->hasRole('prediction')) --}}
+                                        <a class="dropdown-item" href="/prediction">prediction</a>
+                                    {{-- @endif --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
