@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var c = 0;
 
     for (body in response.data) {
-      data.push(Math.floor(Math.random() * 20) + 1);
+      data.push(Math.floor(Math.random() * 20) + 15);
       labels[body] = String(response.data[body].start + ' - ' + response.data[body].end);
       c++;
     }
