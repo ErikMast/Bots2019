@@ -20,6 +20,19 @@ class SeismicController extends Controller
         return response()->json($events);
     }
 
+    public function typeSeperatorGraph(SeismicLineChart $request)
+    {
+        $startDate = $request->get('start_date');
+        $endDate = $request->get('end_date');
+
+        $inducedCount = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->where("type", "induced earthquake")->count();
+        $naturalCount = SeismicEvent::whereDate('date', '>', $startDate)->whereDate('date', '<', $endDate)->where("type", "earthquake")->count();
+
+        return response()->json([
+           $inducedCount, $naturalCount
+        ]);
+    }
+
     public function lineChart(SeismicLineChart $request)
     {
         $startDate = $request->get('start_date');

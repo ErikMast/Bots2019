@@ -30,7 +30,8 @@
                     </div>
 
                     <div class="card-body">
-                        <div id="map"></div>
+                        <div class="alert alert-warning">This database is still computing, 1GB of data in total</div>
+
                     </div>
 
                 </div>
@@ -39,7 +40,7 @@
 
             </div>
         </div>
-
+        <br>
         <div class="card">
 
             <div class="card-header bg-dark text-white">
@@ -51,13 +52,16 @@
             </div>
 
         </div>
-
+        <br>
         <div class="row">
 
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-dark text-white">
                         Aandeel menselijke oorsprong vs natuurlijk
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">This database is still computing, 3GB of data in total</div>
                     </div>
                 </div>
             </div>
@@ -67,13 +71,19 @@
                     <div class="card-header bg-dark text-white">
                         Aandeel klein (<3r) vs groot (3r>)
                     </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">This database is still computing, 9GB of data in total</div>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-dark text-white">
-                        gereserveerd, opdonderen
+                        undefined graph
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-danger">No graph associated with this card</div>
                     </div>
                 </div>
             </div>

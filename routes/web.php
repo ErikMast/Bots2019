@@ -23,9 +23,6 @@ Route::prefix("api/v1")->name('api.')->group(function() {
 });
 
 Route::middleware("auth")->group(function() {
-
     Route::get('/accounts', 'PagesController@accounts')->name('pages.accounts');
     Route::get('/reports', 'ReportController@reports')->name('report.reports');
-  
-
 });
