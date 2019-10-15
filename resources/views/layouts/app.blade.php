@@ -17,6 +17,11 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+{{--    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization?key={{env("GOOGLE_MAPS_KEY")}}"></script>--}}
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{env("GOOGLE_MAPS_KEY")}}&callback=initMap"
+            type="text/javascript"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
  
     
     <!-- Styles -->

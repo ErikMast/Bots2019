@@ -29,6 +29,10 @@
                         Visualisatiekaart
                     </div>
 
+                    <div class="card-body">
+                        <div id="map"></div>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-4">

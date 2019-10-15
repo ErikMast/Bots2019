@@ -19,6 +19,7 @@ Auth::routes(["register" => false]);
 
 Route::prefix("api/v1")->name('api.')->group(function() {
     Route::get('/seismic/line', 'SeismicController@lineChart')->name('seismic.line');
+    Route::get('/seismic/heatmap', 'SeismicController@heatMapChart')->name('seismic.heat');
 });
 
 Route::middleware("auth")->group(function() {
