@@ -29,9 +29,9 @@
                         Visualisatiekaart
                     </div>
 
-                    <div class="card-body">
-                        <div class="alert alert-warning">This database is still computing, 1GB of data in total</div>
-
+                    <div class="card-body" style="height:100%; width:100%;">
+{{--                        <div class="alert alert-warning">This database is still computing, 1GB of data in total</div>--}}
+                        <div id="cred4654" style="width: 100%; height: 20em;"></div>
                     </div>
 
                 </div>
