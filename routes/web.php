@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'DashboardController@index')->name('dashboard.index');
+Route::get('/data/air', 'DashboardController@air')->name('dashboard.air');
 Route::get('/report', 'ReportController@index')->name('report.index');
 Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:10,1');
 

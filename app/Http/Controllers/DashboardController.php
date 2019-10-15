@@ -8,6 +8,24 @@ use Illuminate\Support\Facades\DB;
 class DashboardController extends Controller
 {
 
+    public function air(Request $request)
+    {
+        $date = "1911-5-30";
+        $end = date('Y-m-d');
+
+        if($request->has('start'))
+        {
+            $date = $request->get('start');
+        }
+
+        if($request->has('end'))
+        {
+            $end = $request->get('end');
+        }
+        return view("dashboard.air", compact('date', 'end'));
+
+    }
+
     public function index(Request $request)
     {
 
