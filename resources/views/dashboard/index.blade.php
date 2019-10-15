@@ -150,6 +150,35 @@
             </div>
 
         </div>
+        <br>
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                Quality of Living index score
+            </div>
+            <div class="card-body">
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Long</b> <input name="long" type="text" class="form-control" value="@if(isset($_GET['long'])){{$_GET['long']}}@endif">
+                        </div>
+                        <div class="col-md-3">
+                            <b>Lat</b> <input name="lat" type="text" class="form-control" value="@if(isset($_GET['lat'])){{$_GET['lat']}}@endif">
+                        </div>
+                        <div class="col-md-4">
+                            @if($qolis !== null)
+                                <br>
+                                <b>Quality of living index score: </b> {{round($qolis, 2)}}
+                                <br>
+                                <small class="text-muted">Des te hoger het QoLis, des te slechter de kwaliteit van leven</small>
+                            @endif
+                        </div>
+                    </div>
+
+                    <br>
+                    <input type="submit" class="btn btn-dark" value="Bereken QoLis">
+                </form>
+            </div>
+        </div>
 
     </div>
 
