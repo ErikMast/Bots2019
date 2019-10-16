@@ -104,7 +104,7 @@
 Heat map
  */
 document.addEventListener('DOMContentLoaded', function () {
-  axios.get('/api/v1/seismic/seperator?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
+  axios.get('/api/v1/seismic/seperator?start_date=2016-1-1&end_date=2019-10-16').then(function (data) {
     d2 = {
       datasets: [{
         data: [data.data[0], data.data[1]],
@@ -120,23 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   });
-  axios.get('/api/v1/air_quality/magnitude?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
-    d2 = {
-      datasets: [{
-        data: [data.data[0], data.data[1]],
-        backgroundColor: ['#43a047', '#0277bd']
-      }],
-      // These labels appear in the legend and in the tooltips when hovering different arcs
-      labels: ['<3', '>=3']
-    }; // debugger;
-
-    var myPieChart = new Chart(document.getElementById('magnitude'), {
-      type: 'pie',
-      data: d2 // options: options
-
-    });
-  });
-  axios.get('../api/v1/air_quality/heatmap?start_date=1990-1-1&end_date=2019-1-1').then(function (response) {
+  axios.get('../api/v1/air_quality/heatmap?start_date=2016-1-1&end_date=2019-10-16').then(function (response) {
     var mapOptions = {
       zoom: 13,
       center: new google.maps.LatLng(51.5, -0.11)
@@ -318,7 +302,7 @@ Line chart
 var data = [];
 var labels = [];
 document.addEventListener('DOMContentLoaded', function () {
-  axios.get('../api/v1/air_quality/line?start_date=1990-2-2&end_date=2019-10-16').then(function (response) {
+  axios.get('./api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2').then(function (response) {
     var c = 0;
 
     for (body in response.data) {
@@ -355,7 +339,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     myChart.update();
   }, 1000);
-}); // myChart.update();
+});
+myChart.update();
 
 /***/ }),
 
@@ -366,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\air.js */"./resources/js/air.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\air.js */"./resources/js/air.js");
 
 
 /***/ })

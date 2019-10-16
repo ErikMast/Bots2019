@@ -13,7 +13,7 @@ Heat map
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    axios.get('/api/v1/seismic/seperator?start_date=1990-1-1&end_date=2019-1-1').then((data) => {
+    axios.get('/api/v1/seismic/seperator?start_date=2016-1-1&end_date=2019-10-16').then((data) => {
 
 
         d2 = {
@@ -41,35 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    axios.get('/api/v1/air_quality/magnitude?start_date=1990-1-1&end_date=2019-1-1').then((data) => {
 
-
-        d2 = {
-            datasets: [{
-                data: [data.data[0], data.data[1]],
-                backgroundColor: ['#43a047', '#0277bd']
-            }],
-
-
-
-            // These labels appear in the legend and in the tooltips when hovering different arcs
-            labels: [
-                '<3',
-                '>=3',
-            ]
-        };
-
-        // debugger;
-
-        var myPieChart = new Chart(document.getElementById('magnitude'), {
-            type: 'pie',
-            data: d2,
-            // options: options
-        });
-
-    })
-
-    axios.get('../api/v1/air_quality/heatmap?start_date=1990-1-1&end_date=2019-1-1').then((response) => {
+    axios.get('../api/v1/air_quality/heatmap?start_date=2016-1-1&end_date=2019-10-16').then((response) => {
 
         var mapOptions = {
             zoom: 13,
@@ -242,7 +215,7 @@ let labels = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    axios.get('../api/v1/air_quality/line?start_date=1990-2-2&end_date=2019-10-16')
+    axios.get('./api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2')
         .then(function (response) {
 
             let c = 0;
@@ -287,4 +260,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 })
 
-// myChart.update();
+myChart.update();

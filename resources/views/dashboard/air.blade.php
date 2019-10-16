@@ -91,13 +91,12 @@
                 <div class="legend">
                     <h4>Legend</h4>
                     <ul>
-                        <li><span style="background-color:#FA5C43"></span>NO - Monday</li>
-                        <li><span style="background-color:#998973"></span>PM10 - Tuesday</li>
-                        <li><span style="background-color:#FAAE43"></span>NO2 - Wednesday</li>
-                        <li><span style="background-color:#1F6980"></span>FN - Thursday</li>
-                        <li><span style="background-color:#AB156A"></span>C8H10 - Friday</li>
-                        <li><span style="background-color:#AB156A"></span>C7H8 - Friday</li>
-                        <li><span style="background-color:#AB156A"></span>C6H6 - Friday</li>
+                        <li><span style="background-color:#FA5C43"></span>NO - stikstofdioxide</li>
+                        <li><span style="background-color:#998973"></span>PM10 - Particulate matter</li>
+                        <li><span style="background-color:#FAAE43"></span>NO2 - Nitrogen dioxide</li>
+                        <li><span style="background-color:#AB156A"></span>C8H10 - Xyleen</li>
+                        <li><span style="background-color:#AB156A"></span>O3 - Ozon</li>
+                        <li><span style="background-color:#AB156A"></span>CO - Koolmonoxide </li>
                     </ul>
                 </div>
             </div>

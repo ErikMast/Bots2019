@@ -22,6 +22,8 @@ class DashboardController extends Controller
     }
     public function index(Request $request)
     {
+        // auth / permissions / rols
+
         // creates rol/permission in the system
         // $role = Role::create(['name' => 'writer']);
         // $permission = Permission::create(['name' => 'edit articles']);
