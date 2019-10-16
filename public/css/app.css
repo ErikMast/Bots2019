@@ -10675,3 +10675,36 @@ a.text-dark:focus {
   margin-right: 6px;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#copyright {
+  color: white;
+}
+
+.bg-dark-light {
+  background: #323232 !important;
+  text-align: center;
+  margin-bottom: -50px;
+  min-height: 100%;
+}
+
+.widgets.footer-widgets .widget-contact ul li {
+  color: #000;
+  font-size: 13px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.widgets.footer-widgets .widget-contact ul li {
+  color: #000;
+  font-size: 13px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+

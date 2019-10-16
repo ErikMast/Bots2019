@@ -32,3 +32,41 @@
   height: 12px;
   margin-right: 6px;
 }
+html, body{
+  height: 100%;
+  margin: 0;
+}
+// Footer
+#copyright {
+  color: white;
+}
+.bg-dark-light {
+  background: #323232 !important;
+  text-align: center;
+  margin-bottom: -50px;
+  min-height: 100%;
+}
+.widgets.footer-widgets .widget-contact ul li {
+  color: #000;
+  font-size: 13px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.widgets.footer-widgets .widget-contact ul li {
+  color: #000;
+  font-size: 13px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+// footer

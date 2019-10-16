@@ -499,7 +499,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "datasets": [{
         label: "Aardbevingen",
         data: data,
-        hidden: true
+        hidden: true,
+        backgroundColor: 'rgba(255, 0, 0, 0.5)'
+      }, {
+        label: "extra",
+        data: data,
+        hidden: true,
+        backgroundColor: 'rgba(0, 255, 0, 0.5)'
       }],
       "labels": labels
     },
@@ -520,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     myChart.update();
   }, 1000);
-}); // myChart.update();
+}); //myChart.update();
 
 /***/ }),
 
