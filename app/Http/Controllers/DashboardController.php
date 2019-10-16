@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 class DashboardController extends Controller
 {
     public function air(Request $request)
@@ -20,6 +22,27 @@ class DashboardController extends Controller
     }
     public function index(Request $request)
     {
+        // creates rol/permission in the system
+        // $role = Role::create(['name' => 'writer']);
+        // $permission = Permission::create(['name' => 'edit articles']);
+
+        // lets you search for the right location
+        // $role = Role::findById(1);
+        // $permission = Permission::findById(2);
+
+        // connects the role with permission
+        // $role->givePermissionTo($permission);
+
+        // removes a role from the db
+        // $permission->removeRole($role);
+        // $role->revokePermissionTo($permission);
+
+        // puts it in the model_has_roles
+        // auth()->user()->givePermissionTo('edit articles');
+        //auth()->user()->assignRole('writer');
+
+        //return auth()->user()->permissions;
+
         $date = "1911-5-30";
         $end = date('Y-m-d');
         if($request->has('start'))
