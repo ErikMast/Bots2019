@@ -15,6 +15,7 @@ Route::get('/', 'DashboardController@index')->name('dashboard.index');
 Route::get('/data/air', 'DashboardController@air')->name('dashboard.air');
 Route::get('/report', 'ReportController@index')->name('report.index');
 Route::post('/report', 'ReportController@store')->name('report.store')->middleware('throttle:10,1');
+Route::get('/qol', 'QoLController@index')->name('qol.index');
 
 Auth::routes(["register" => false]);
 
@@ -24,9 +25,7 @@ Route::prefix("api/v1")->name('api.')->group(function() {
     Route::get('/seismic/prediction', 'SeismicController@predictionChart')->name('seismic.heat');
     Route::get('/seismic/seperator', 'SeismicController@typeSeperatorGraph')->name('seismic.seperator');
     Route::get('/seismic/magnitude', 'SeismicController@magnitudeSeperatorGraph')->name('seismic.magnitude');
-});
 
-Route::prefix("api/v1")->name('api.')->group(function() {
     Route::get('/air_quality/line', 'airqualityController@lineChart')->name('air_quality.line');
     Route::get('/air_quality/heatmap', 'airqualityController@heatMapChart')->name('air_quality.heat');
     Route::get('/air_quality/prediction', 'airqualityController@predictionChart')->name('air_quality.heat');

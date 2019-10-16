@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    axios.get('/api/v1/seismic/magnitude?start_date=1990-1-1&end_date=2019-1-1').then((data) => {
+    axios.get('/api/v1/air_quality/magnitude?start_date=1990-1-1&end_date=2019-1-1').then((data) => {
 
 
         d2 = {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    axios.get('../api/v1/seismic/heatmap?start_date=1990-1-1&end_date=2019-1-1').then((response) => {
+    axios.get('../api/v1/air_quality/heatmap?start_date=1990-1-1&end_date=2019-1-1').then((response) => {
 
         var mapOptions = {
             zoom: 13,
@@ -81,23 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
 
-        var heatMapData = [
-            {location: new google.maps.LatLng(37.782, -122.447), weight: 0.5},
-            new google.maps.LatLng(37.782, -122.445),
-            {location: new google.maps.LatLng(37.782, -122.443), weight: 2},
-            {location: new google.maps.LatLng(37.782, -122.441), weight: 3},
-            {location: new google.maps.LatLng(37.782, -122.439), weight: 2},
-            new google.maps.LatLng(37.782, -122.437),
-            {location: new google.maps.LatLng(37.782, -122.435), weight: 0.5},
-
-            {location: new google.maps.LatLng(37.785, -122.447), weight: 3},
-            {location: new google.maps.LatLng(37.785, -122.445), weight: 2},
-            new google.maps.LatLng(37.785, -122.443),
-            {location: new google.maps.LatLng(37.785, -122.441), weight: 0.5},
-            new google.maps.LatLng(37.785, -122.439),
-            {location: new google.maps.LatLng(37.785, -122.437), weight: 2},
-            {location: new google.maps.LatLng(37.785, -122.435), weight: 3}
-        ];
 
         var heatData = [];
 
@@ -259,13 +242,13 @@ let labels = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    axios.get('../api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2')
+    axios.get('../api/v1/air_quality/line?start_date=1990-2-2&end_date=2019-10-16')
         .then(function (response) {
 
             let c = 0;
             for(body in response.data)
             {
-                data.push(Math.floor(Math.random() * 20) + 15  )
+                data.push(response.data[body].count);
                 labels[body] = String(response.data[body].start + ' - ' + response.data[body].end);
                 c++;
             }

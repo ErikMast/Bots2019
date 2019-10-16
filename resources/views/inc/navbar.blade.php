@@ -16,7 +16,7 @@
 
                   <!-- Right Side Of Navbar -->
                   <ul class="navbar-nav ml-auto test">
-                      
+                      <a class="nav-link" href="{{route("qol.index")}}">QoL</a>
                         <a class="nav-link" href="/report">Report</a>
                       <!-- Authentication Links -->
                       @guest

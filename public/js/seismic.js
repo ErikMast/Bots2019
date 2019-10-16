@@ -537,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\seismic.js */"./resources/js/seismic.js");
+module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\seismic.js */"./resources/js/seismic.js");
 
 
 /***/ })

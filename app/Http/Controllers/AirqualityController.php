@@ -59,6 +59,7 @@ class AirqualityController extends Controller
 
     public function lineChart(AirqualityLineChart $request)
     {
+
         $startDate = $request->get('start_date');
         $endDate = $request->get('end_date');
 

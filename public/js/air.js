@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   });
-  axios.get('/api/v1/seismic/magnitude?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
+  axios.get('/api/v1/air_quality/magnitude?start_date=1990-1-1&end_date=2019-1-1').then(function (data) {
     d2 = {
       datasets: [{
         data: [data.data[0], data.data[1]],
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   });
-  axios.get('../api/v1/seismic/heatmap?start_date=1990-1-1&end_date=2019-1-1').then(function (response) {
+  axios.get('../api/v1/air_quality/heatmap?start_date=1990-1-1&end_date=2019-1-1').then(function (response) {
     var mapOptions = {
       zoom: 13,
       center: new google.maps.LatLng(51.5, -0.11)
@@ -144,37 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var map = new google.maps.Map(document.getElementById("cred4654"), mapOptions);
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
-    var heatMapData = [{
-      location: new google.maps.LatLng(37.782, -122.447),
-      weight: 0.5
-    }, new google.maps.LatLng(37.782, -122.445), {
-      location: new google.maps.LatLng(37.782, -122.443),
-      weight: 2
-    }, {
-      location: new google.maps.LatLng(37.782, -122.441),
-      weight: 3
-    }, {
-      location: new google.maps.LatLng(37.782, -122.439),
-      weight: 2
-    }, new google.maps.LatLng(37.782, -122.437), {
-      location: new google.maps.LatLng(37.782, -122.435),
-      weight: 0.5
-    }, {
-      location: new google.maps.LatLng(37.785, -122.447),
-      weight: 3
-    }, {
-      location: new google.maps.LatLng(37.785, -122.445),
-      weight: 2
-    }, new google.maps.LatLng(37.785, -122.443), {
-      location: new google.maps.LatLng(37.785, -122.441),
-      weight: 0.5
-    }, new google.maps.LatLng(37.785, -122.439), {
-      location: new google.maps.LatLng(37.785, -122.437),
-      weight: 2
-    }, {
-      location: new google.maps.LatLng(37.785, -122.435),
-      weight: 3
-    }];
     var heatData = [];
 
     for (i in response.data) {
@@ -349,11 +318,11 @@ Line chart
 var data = [];
 var labels = [];
 document.addEventListener('DOMContentLoaded', function () {
-  axios.get('../api/v1/seismic/line?start_date=1990-2-2&end_date=2019-2-2').then(function (response) {
+  axios.get('../api/v1/air_quality/line?start_date=1990-2-2&end_date=2019-10-16').then(function (response) {
     var c = 0;
 
     for (body in response.data) {
-      data.push(Math.floor(Math.random() * 20) + 15);
+      data.push(response.data[body].count);
       labels[body] = String(response.data[body].start + ' - ' + response.data[body].end);
       c++;
     }
@@ -397,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\air.js */"./resources/js/air.js");
+module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\air.js */"./resources/js/air.js");
 
 
 /***/ })

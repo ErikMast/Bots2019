@@ -119,7 +119,7 @@ getLocation();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Bots2019\resources\js\report.js */"./resources/js/report.js");
+module.exports = __webpack_require__(/*! C:\Ontwikkeling\laragon\www\Bots2019\resources\js\report.js */"./resources/js/report.js");
 
 
 /***/ })
